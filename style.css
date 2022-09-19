@@ -1,0 +1,176 @@
+h1,
+h2,
+.date-today {
+  font-family: "Source Code Pro", monospace;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #3d280f;
+  opacity: 0.7px;
+  padding-top: 10px;
+  font-family: "Cousine", monospace;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  font-weight: 300;
+  color: #3d280f;
+  padding-top: 10px;
+  position: relative;
+}
+
+h3 {
+  position: relative;
+  left: -120px;
+  color: #434343;
+  font-family: "Poppins", sans-serif;
+  bottom: 30px;
+}
+
+.text-center {
+  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
+}
+
+.date-today {
+  color: #45171d;
+  color: #ffff;
+  padding-top: 30px;
+  font-weight: 500;
+}
+.weather-in {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #434343;
+  padding: 10px;
+}
+.search {
+  border-radius: 28px;
+  border: 1px solid #c0c0c0;
+  padding: 7px;
+  position: relative;
+}
+.nav-bar .search:hover {
+  border: 1px solid #212121;
+}
+
+.search-button {
+  position: absolute;
+  border-radius: 40px;
+  right: 60px;
+  top: 42px;
+  border: 1px solid #0283d2;
+  background: #0283d2;
+  transition: all 150ms ease-in;
+}
+
+.search-button:hover {
+  background: #3e9dea;
+}
+
+.search-icon {
+  color: #ffff;
+}
+
+.celFarh {
+  font-size: 16px;
+  position: relative;
+  bottom: 60px;
+  left: 60px;
+  transition: all 150 ms ease-in-out;
+}
+a {
+  color: #45171d;
+  text-decoration: none;
+}
+.celFarh:hover {
+  text-decoration: underline;
+}
+
+.sun-icon {
+  display: block;
+  text-align: center;
+  width: 120px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+.forecast,
+.day-night,
+.advisory {
+  color: #3d280f;
+  font-family: "Source Code Pro", monospace;
+}
+
+.forecast,
+.day-night {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  bottom: -20px;
+  right: 30px;
+}
+
+.day-night {
+  font-weight: 300;
+}
+.max-min {
+  font-weight: 600;
+}
+
+.advisory {
+  list-style: none;
+  text-align: left;
+  position: relative;
+  bottom: 170px;
+  left: -30px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #45171d;
+}
+
+.this-week {
+  background: #e3f1fe;
+  position: relative;
+  bottom: 30px;
+  border: 1px solid #fffafa;
+}
+.col {
+  background: #e3f1fe;
+}
+.week {
+  background: #fffafa;
+  transition: all 150ms ease-in;
+}
+.week:hover {
+  background: #ffebb7;
+  border: 1px solid #ffebb7;
+}
+
+.forecast-body {
+  font-family: "Source Code Pro", monospace;
+  color: #0b053d;
+}
+
+.temp {
+  color: #393e46;
+}
+
+.drizzle-icon,
+.cloudy-sunny-icon,
+.cloud-icon {
+  width: 35px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.date {
+  color: #7b7b7b;
+  margin: 10px;
+}
