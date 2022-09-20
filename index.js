@@ -196,27 +196,27 @@ function showNewYorkWeather(event) {
 let newyorkElement = document.querySelector("#new-york-element");
 newyorkElement.addEventListener("click", showNewYorkWeather);
 
-// function displayWeatherManila(response) {
-//   document.querySelector(".city-name").innerHTML =
-//     response.data.name.toUpperCase();
-//   document.querySelector("#temp").innerHTML = Math.round(
-//     response.data.main.temp
-//   );
-//   document.querySelector("#description").innerHTML =
-//     response.data.weather[0].main;
-//   document.querySelector("#description").innerHTML =
-//     response.data.weather[0].main;
-//   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-//   document.querySelector("#wind").innerHTML = Math.round(
-//     response.data.wind.speed
-//   );
-//   let max = Math.round(response.data.main.temp_max);
-//   let maxElement = document.querySelector("#max");
-//   maxElement.innerHTML = `${max}˚`;
-//   let min = Math.round(response.data.main.temp_min);
-//   let minElement = document.querySelector("#min");
-//   minElement.innerHTML = `${min}˚`;
-// }
+function displayWeatherManila(response) {
+  document.querySelector(".city-name").innerHTML =
+    response.data.name.toUpperCase();
+  document.querySelector("#temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  let max = Math.round(response.data.main.temp_max);
+  let maxElement = document.querySelector("#max");
+  maxElement.innerHTML = `${max}˚`;
+  let min = Math.round(response.data.main.temp_min);
+  let minElement = document.querySelector("#min");
+  minElement.innerHTML = `${min}˚`;
+}
 
 function showManilaWeather(event) {
   event.preventDefault();
