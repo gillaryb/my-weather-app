@@ -136,93 +136,29 @@ function showLocation(position) {
 }
 navigator.geolocation.getCurrentPosition(showLocation);
 
-function displayWeatherTokyo(response) {
-  document.querySelector(".city-name").innerHTML =
-    response.data.name.toUpperCase();
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  let max = Math.round(response.data.main.temp_max);
-  let maxElement = document.querySelector("#max");
-  maxElement.innerHTML = `${max}˚`;
-  let min = Math.round(response.data.main.temp_min);
-  let minElement = document.querySelector("#min");
-  minElement.innerHTML = `${min}˚`;
-}
-
 function showTokyoWeather(event) {
   event.preventDefault();
   let tokyoApiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=f0553e70ab5eb275ae36ae41c6ace9b0&units=metric";
-  axios.get(tokyoApiUrl).then(displayWeatherTokyo);
+  axios.get(tokyoApiUrl).then(displayWeather);
 }
 let tokyoElement = document.querySelector("#tokyo-element");
 tokyoElement.addEventListener("click", showTokyoWeather);
-
-function displayWeatherNewYork(response) {
-  document.querySelector(".city-name").innerHTML =
-    response.data.name.toUpperCase();
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  let max = Math.round(response.data.main.temp_max);
-  let maxElement = document.querySelector("#max");
-  maxElement.innerHTML = `${max}˚`;
-  let min = Math.round(response.data.main.temp_min);
-  let minElement = document.querySelector("#min");
-  minElement.innerHTML = `${min}˚`;
-}
 
 function showNewYorkWeather(event) {
   event.preventDefault();
   let newYorkApiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=new york&appid=f0553e70ab5eb275ae36ae41c6ace9b0&units=metric";
-  axios.get(newYorkApiUrl).then(displayWeatherNewYork);
+  axios.get(newYorkApiUrl).then(displayWeather);
 }
 let newyorkElement = document.querySelector("#new-york-element");
 newyorkElement.addEventListener("click", showNewYorkWeather);
-
-function displayWeatherManila(response) {
-  document.querySelector(".city-name").innerHTML =
-    response.data.name.toUpperCase();
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  let max = Math.round(response.data.main.temp_max);
-  let maxElement = document.querySelector("#max");
-  maxElement.innerHTML = `${max}˚`;
-  let min = Math.round(response.data.main.temp_min);
-  let minElement = document.querySelector("#min");
-  minElement.innerHTML = `${min}˚`;
-}
 
 function showManilaWeather(event) {
   event.preventDefault();
   let manilaApiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=manila&appid=f0553e70ab5eb275ae36ae41c6ace9b0&units=metric";
-  axios.get(manilaApiUrl).then(displayWeatherManila);
+  axios.get(manilaApiUrl).then(displayWeather);
 }
 let manilaElement = document.querySelector("#manila-element");
 manilaElement.addEventListener("click", showManilaWeather);
