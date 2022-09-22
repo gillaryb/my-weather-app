@@ -110,9 +110,9 @@ a {
   font-family: "Courier New", Courier, monospace;
 }
 
-.sun-icon {
+.main-icon {
   display: block;
-  margin: 10px 60px 10px 60px;
+  margin: 10px 70px;
 }
 
 .temperature {
