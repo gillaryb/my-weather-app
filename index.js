@@ -1,5 +1,5 @@
-function formatDate() {
-  let now = new Date();
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
   let months = [
     "Jan",
     "Feb",
@@ -33,11 +33,8 @@ function formatDate() {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let div = document.querySelector(".date-today");
-  div.innerHTML = `${month} ${date}, ${day} | ${hours}:${minutes} `;
-  return div.innerHTML;
+  return `${month} ${date}, ${day} | ${hours}:${minutes} `;
 }
-formatDate();
 
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -69,15 +66,18 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  let max = Math.round(response.data.main.temp_max);
-  let maxElement = document.querySelector("#max");
-  maxElement.innerHTML = `${max}˚`;
-  let min = Math.round(response.data.main.temp_min);
-  let minElement = document.querySelector("#min");
-  minElement.innerHTML = `${min}˚`;
+  document.querySelector("#max").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("#min").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
+  );
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
   );
   //   document.querySelector("#main-icon").innerHTML =
   //     response.data.weather[0].icon;
