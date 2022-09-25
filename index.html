@@ -41,18 +41,18 @@
                     placeholder="Search for your city"
                     size="40"
                     autofocus=""
-                    class="search-field"
+                    class="search-field shadow-sm"
                     id="search-input"
                   />
                   <input
                     type="submit"
                     value="Search"
-                    class="btn btn-primary search-input pl-3"
+                    class="btn btn-primary shadow-sm search-input"
                   />
                   <input
                     type="submit"
                     value="Current location"
-                    class="btn btn-outline-primary shadow-sm search-button pl-3"
+                    class="btn btn-outline-primary shadow-sm search-button"
                     id="search"
                   />
                 </div>
@@ -81,14 +81,12 @@
               <div class="main-icon">
                 <img src="" alt="" width="150px" id="main-icon" />
               </div>
-              <div class="row temperature">
-                <div class="col-6 current-temp" id="temp"></div>
-                <div class="col-4 celFarh-class">
-                  <span class="celFarh">
-                    <a href="#" class="celcius" id="celcius-link">˚C </a> |
-                    <a href="#" class="farh" id="fahr-link">˚F</a>
-                  </span>
-                </div>
+              <div class="weather-temperature p-2">
+                <strong id="temp"></strong
+                ><span class="celFarh">
+                  <a href="#" class="celcius" id="celcius-link">˚C </a> |
+                  <a href="#" class="farh" id="fahr-link">˚F</a>
+                </span>
               </div>
             </div>
             <ul class="weather">

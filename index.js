@@ -36,35 +36,11 @@ function formatDate(timestamp) {
   return `${month} ${date}, ${day} | ${hours}:${minutes} `;
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  let temperature = tempElement.innerHTML;
-  temperature = Number(temperature);
-  tempElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
-  celciusLink
-}
-
-let fahrenheitLink = document.querySelector("#fahr-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-function convertToCelcius(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  let temperature = tempElement.innerHTML;
-  temperature = Number(temperature);
-  tempElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
-}
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
-
 function displayWeather(response) {
-  console.log(response.data);
   document.querySelector(".city-name").innerHTML =
     response.data.name.toUpperCase();
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celciusTemperature = response.data.main.temp;
+  document.querySelector("#temp").innerHTML = Math.round(celciusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#max").innerHTML = Math.round(
@@ -87,6 +63,8 @@ function displayWeather(response) {
   );
 }
 
+let celciusTemperature = null;
+
 function search(city) {
   let apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
   let unit = "metric";
@@ -104,6 +82,27 @@ let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
 search("Tokyo");
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  celciusLink.classList.remove("celcius");
+  fahrenheitLink.classList.add("celcius");
+  tempElement.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
+}
+
+let fahrenheitLink = document.querySelector("#fahr-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+function convertToCelcius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  fahrenheitLink.classList.remove("celcius");
+  celciusLink.classList.add("celcius");
+  tempElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", convertToCelcius);
 
 // function showTemperature(response) {
 //   console.log(response.data);
@@ -146,6 +145,7 @@ function showTokyoWeather(event) {
     "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=f0553e70ab5eb275ae36ae41c6ace9b0&units=metric";
   axios.get(tokyoApiUrl).then(displayWeather);
 }
+
 let tokyoElement = document.querySelector("#tokyo-element");
 tokyoElement.addEventListener("click", showTokyoWeather);
 
@@ -155,6 +155,7 @@ function showNewYorkWeather(event) {
     "https://api.openweathermap.org/data/2.5/weather?q=new york&appid=f0553e70ab5eb275ae36ae41c6ace9b0&units=metric";
   axios.get(newYorkApiUrl).then(displayWeather);
 }
+
 let newyorkElement = document.querySelector("#new-york-element");
 newyorkElement.addEventListener("click", showNewYorkWeather);
 
@@ -164,5 +165,6 @@ function showManilaWeather(event) {
     "https://api.openweathermap.org/data/2.5/weather?q=manila&appid=f0553e70ab5eb275ae36ae41c6ace9b0&units=metric";
   axios.get(manilaApiUrl).then(displayWeather);
 }
+
 let manilaElement = document.querySelector("#manila-element");
 manilaElement.addEventListener("click", showManilaWeather);

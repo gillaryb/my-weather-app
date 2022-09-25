@@ -116,27 +116,25 @@ a {
   margin: 10px 70px;
 }
 
-.temperature {
-  position: relative;
+.weather-temperature {
+  text-align: center;
 }
-.current-temp {
+.weather-temperature strong {
   font-size: 70px;
-  padding: 10px 0px 10px 50px;
-  margin: -25px 0px 10px 20px;
   color: #fcfefe;
   font-family: "Poppins", sans-serif;
 }
-.celFarh-class {
-  padding: 0px;
-}
-.celFarh {
-  float: right;
-  margin: 40px 10px;
+.weather-temperature .celFarh {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
   color: #111f4d;
+  font-size: 16px;
 }
-.celcius,
-.farh {
+
+.weather-temperature .celcius {
   color: #fcfefe;
+  cursor: default;
 }
 .weather {
   list-style: none;
