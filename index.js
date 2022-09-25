@@ -36,6 +36,32 @@ function formatDate(timestamp) {
   return `${month} ${date}, ${day} | ${hours}:${minutes} `;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastHTML = `<div class="row week">`;
+  let days = ["Monday", "Tuesday", "Wedneday", "Thursday", "Friday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col shadow-sm day">
+                <h5>${day}</h5>
+                <div class="date">Sept 6</div>
+                <img
+                  src="icons/drizzle.svg"
+                  alt="drizzle"
+                  class="weather-icon"
+                  width="110px"
+                />
+                <div class="temperature">28˚/ 22˚</div>
+                <div class="forecast">Rain</div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 function displayWeather(response) {
   document.querySelector(".city-name").innerHTML =
     response.data.name.toUpperCase();

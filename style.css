@@ -6,10 +6,6 @@ h1 {
   font-family: "Poppins", sans-serif;
 }
 
-h5 {
-  font-family: "Work Sans", sans-serif;
-  margin: 10px 5px 5px 3px;
-}
 h6 {
   line-height: 24px;
   font-size: 1px;
@@ -154,14 +150,14 @@ a {
   padding: 30px;
   text-align: center;
 }
-.this-week {
+.weather-forecast {
   position: absolute;
   top: 66px;
   right: 21px;
   border: none;
   margin: 23px 0px;
 }
-.day {
+.weather-forecast .day {
   font-size: 18px;
   padding: 10px;
   text-align: center;
@@ -170,7 +166,7 @@ a {
   color: #111f4d;
   font-family: "Work Sans", sans-serif;
 }
-.day:hover {
+.weather-forecast .day:hover {
   /* background: radial-gradient(
     circle at 10% 20%,
     rgb(254, 255, 165) 0%,
@@ -178,37 +174,34 @@ a {
   ); */
   background: #fdffcd;
 }
-.week-name {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
-}
-.week {
+
+.weather-forecast .week {
   column-gap: 5px;
 }
 
-.date {
+.weather-forecast h5 {
+  font-family: "Work Sans", sans-serif;
+  margin: 10px 5px 5px 3px;
+}
+
+.weather-forecast .date {
   padding-bottom: 10px;
 }
-.temp-monday,
-.temp-tuesday,
-.temp-wednesday,
-.temp-thursday,
-.temp-friday {
+
+.weather-forecast .temperature {
   padding: 20px 20px 10px 20px;
 }
-.weather-mon,
-.weather-tue,
-.weather-wed,
-.weather-thurs,
-.weather-fri {
+
+.weather-forecast .forecast {
   text-transform: uppercase;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
 
-.date {
+.weather-forecast .date {
   font-size: 14px;
 }
+
 .advisory {
   border-radius: 35px;
   padding: 14px;
