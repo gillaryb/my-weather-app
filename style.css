@@ -44,7 +44,7 @@ a {
   line-height: 34px;
   position: relative;
   float: right;
-  top: -64px;
+  top: -60px;
   color: #984a59;
   border: 1px solid #984a59;
   border-radius: 50px;
@@ -87,11 +87,12 @@ a {
   border-radius: 18px;
   border: 1px solid #000;
 }
-.search-button {
-  width: 150px;
+.search-input .search-button {
   height: 40px;
   position: relative;
-  top: -2px;
+}
+.search-button {
+  margin-left: 10px;
 }
 .main-weather {
   margin: 20px 20px 20px 0;

@@ -42,6 +42,7 @@ function convertToFahrenheit(event) {
   let temperature = tempElement.innerHTML;
   temperature = Number(temperature);
   tempElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  celciusLink
 }
 
 let fahrenheitLink = document.querySelector("#fahr-link");
