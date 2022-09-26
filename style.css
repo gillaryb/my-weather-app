@@ -210,18 +210,25 @@ a {
 .humidity,
 .wind {
   border-radius: 35px;
-  padding: 14px;
   text-align: center;
   margin: 10px 0px 10px 10px;
   column-gap: 20px;
   color: #111f4d;
 }
+
+/* .weather-advisory {
+  position: relative;
+  left: 380px;
+  top: -130px;
+} */
 .weather-advisory .precipitation {
   background: radial-gradient(
     circle at 10% 20%,
     rgb(10, 174, 227) 0%,
     rgb(124, 182, 255) 100.2%
   );
+  /* position: relative;
+  left: 400px; */
   /* background: radial-gradient(
     465px at -15.1% -25%,
     rgb(17, 130, 193) 0%,
