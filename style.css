@@ -193,7 +193,7 @@ a {
 }
 
 .weather-forecast .temperature {
-  padding: 20px 20px 10px 20px;
+  padding: 20px;
 }
 
 .weather-forecast .forecast {
@@ -206,7 +206,9 @@ a {
   font-size: 14px;
 }
 
-.advisory {
+.weather-advisory .precipitation,
+.humidity,
+.wind {
   border-radius: 35px;
   padding: 14px;
   text-align: center;
@@ -214,7 +216,7 @@ a {
   column-gap: 20px;
   color: #111f4d;
 }
-.precipitation {
+.weather-advisory .precipitation {
   background: radial-gradient(
     circle at 10% 20%,
     rgb(10, 174, 227) 0%,
@@ -233,10 +235,10 @@ a {
     rgb(72, 177, 234) 100.2%
   ); */
 }
-.humidity {
+.weather-advisory .humidity {
   background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
 }
-.wind {
+.weather-advisory .wind {
   background: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
   /* background: linear-gradient(
     109.6deg,
