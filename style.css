@@ -17,6 +17,16 @@ button {
 a {
   text-decoration: none;
 }
+
+.weather-app {
+  border: 1px solid #d0d0d0;
+  border-radius: 20px;
+  padding: 38px 20px 10px 20px;
+  /* padding-top: 35px; */
+  margin-top: 40px;
+  max-width: 100%;
+}
+
 .navbar-nav {
   position: relative;
   background: red;
@@ -151,13 +161,13 @@ a {
 
 .forecast-heading {
   position: absolute;
-  top: 110px;
-  left: 380px;
+  top: 170px;
+  left: 460px;
 }
 .weather-forecast {
   position: absolute;
-  top: 120px;
-  right: 21px;
+  top: 180px;
+  right: 100px;
   border: none;
   margin: 23px 0px;
 }
@@ -207,7 +217,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  top: -145px;
+  top: -135px;
   left: 412px;
   position: relative;
 }
@@ -271,5 +281,4 @@ a {
   );  This is dark*/
 }
 .footer {
-  margin: 58px;
 }

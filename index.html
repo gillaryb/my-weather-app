@@ -29,100 +29,98 @@
   </head>
   <body>
     <div class="container">
-      <div class="card" style="width: 69rem">
-        <div class="card-body main">
-          <div class="menu-bar">
-            <form id="search-form">
-              <div class="row">
-                <div class="col-8 p-2">
-                  <span><i class="bi bi-search search-icon"></i></span>
-                  <input
-                    type="search"
-                    placeholder="Search for your city"
-                    size="40"
-                    autofocus=""
-                    class="search-field shadow-sm"
-                    id="search-input"
-                  />
-                  <input
-                    type="submit"
-                    value="Search"
-                    class="btn btn-primary shadow-sm search-input"
-                  />
-                  <input
-                    type="submit"
-                    value="Current location"
-                    class="btn btn-outline-primary shadow-sm search-button"
-                    id="search"
-                  />
-                </div>
-              </div>
-            </form>
-            <ul class="features">
-              <li>
-                <a href="#" class="new-york shadow-sm" id="new-york-element"
-                  >New York
-                </a>
-              </li>
-              <li>
-                <a href="#" class="manila shadow-sm" id="manila-element"
-                  >Manila</a
-                >
-              </li>
-              <li>
-                <a href="#" class="tokyo shadow-sm" id="tokyo-element">Tokyo</a>
-              </li>
-            </ul>
-          </div>
-          <div class="card main-weather shadow" style="width: 21rem">
-            <div class="card-body">
-              <div class="date-today" id="date">Sept 5, Monday 14:29</div>
-              <h1 class="city-name"></h1>
-              <div class="main-icon">
-                <img src="" alt="" width="150px" id="main-icon" />
-              </div>
-              <div class="weather-temperature p-2">
-                <strong id="temp"></strong
-                ><span class="celFarh">
-                  <a href="#" class="celcius" id="celcius-link">˚C </a> |
-                  <a href="#" class="farh" id="fahr-link">˚F</a>
-                </span>
+      <div class="weather-app">
+        <div class="menu-bar">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-8 p-2">
+                <span><i class="bi bi-search search-icon"></i></span>
+                <input
+                  type="search"
+                  placeholder="Search for your city"
+                  size="40"
+                  autofocus=""
+                  class="search-field shadow-sm"
+                  id="search-input"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary shadow-sm search-input"
+                />
+                <input
+                  type="submit"
+                  value="Current location"
+                  class="btn btn-outline-primary shadow-sm search-button"
+                  id="search"
+                />
               </div>
             </div>
-            <ul class="weather">
-              <li class="today" id="description"></li>
-              <li class="max-min">
-                <strong>Max:</strong>
-                <span class="temp-today" id="max"></span>˚
-                <strong>Min:</strong>
-                <span id="min"></span>˚
-              </li>
-            </ul>
-          </div>
+          </form>
+          <ul class="features">
+            <li>
+              <a href="#" class="new-york shadow-sm" id="new-york-element"
+                >New York
+              </a>
+            </li>
+            <li>
+              <a href="#" class="manila shadow-sm" id="manila-element"
+                >Manila</a
+              >
+            </li>
+            <li>
+              <a href="#" class="tokyo shadow-sm" id="tokyo-element">Tokyo</a>
+            </li>
+          </ul>
         </div>
-        <h4 class="forecast-heading">Weather Forecast</h4>
-        <div class="weather-forecast p-2" id="forecast"></div>
-        <ul class="weather-advisory row">
-          <li class="col-2 shadow precipitation w-10">
-            <h5>
-              Precipitation
-              <div>60%</div>
-            </h5>
-          </li>
-          <li class="col-2 shadow humidity">
-            <h5>
-              Humidity
-              <div><span id="humidity"></span> %</div>
-            </h5>
-          </li>
-          <li class="col-2 shadow wind">
-            <h5>
-              Wind
-              <div><span id="wind"></span> m/s</div>
-            </h5>
-          </li>
-        </ul>
+        <div class="card main-weather shadow" style="width: 21rem">
+          <div class="card-body">
+            <div class="date-today" id="date">Sept 5, Monday 14:29</div>
+            <h1 class="city-name"></h1>
+            <div class="main-icon">
+              <img src="" alt="" width="150px" id="main-icon" />
+            </div>
+            <div class="weather-temperature p-2">
+              <strong id="temp"></strong
+              ><span class="celFarh">
+                <a href="#" class="celcius" id="celcius-link">˚C </a> |
+                <a href="#" class="farh" id="fahr-link">˚F</a>
+              </span>
+            </div>
+          </div>
+          <ul class="weather">
+            <li class="today" id="description"></li>
+            <li class="max-min">
+              <strong>Max:</strong>
+              <span class="temp-today" id="max"></span>˚
+              <strong>Min:</strong>
+              <span id="min"></span>˚
+            </li>
+          </ul>
+        </div>
       </div>
+      <h4 class="forecast-heading">Weather Forecast</h4>
+      <div class="weather-forecast p-2" id="forecast"></div>
+      <ul class="weather-advisory row">
+        <li class="col-2 shadow precipitation w-10">
+          <h5>
+            Precipitation
+            <div>60%</div>
+          </h5>
+        </li>
+        <li class="col-2 shadow humidity">
+          <h5>
+            Humidity
+            <div><span id="humidity"></span> %</div>
+          </h5>
+        </li>
+        <li class="col-2 shadow wind">
+          <h5>
+            Wind
+            <div><span id="wind"></span> m/s</div>
+          </h5>
+        </li>
+      </ul>
     </div>
     <small class="footer"
       ><a href="https://github.com/gillaryb/my-weather-app ">Open-soure code</a
