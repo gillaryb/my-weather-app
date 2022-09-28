@@ -90,7 +90,7 @@ function displayForecast(response) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 shadow-sm day">
+        `<div class="col shadow-sm day">
                 <h5>${formatForecastDay(forecast.dt)}</h5>
                 <div class="date">${formatForecastDate(forecast.dt)}</div>
                 <img
