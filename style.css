@@ -43,8 +43,8 @@
   line-height: 34px;
   position: relative;
   float: right;
-  right: -740px;
-  top: -60px;
+  right: -680px;
+  top: -52px;
   border: 1px solid #984a59;
   border-radius: 50px;
   transition: all 150ms ease-in-out;
@@ -133,15 +133,17 @@
 .forecast-heading {
   position: absolute;
   top: 140px;
-  left: 380px;
+  left: 400px;
 }
 
-.weather-forecast {
+.weather-forecast .week {
   position: absolute;
-  top: 150px;
-  right: -78px;
+  column-gap: 8px;
+  top: 165px;
+  right: -60px;
   border: none;
   margin: 23px 0px;
+  width: 770px;
 }
 
 .weather-forecast .day {
@@ -156,10 +158,6 @@
 
 .weather-forecast .day:hover {
   background: #fdffcd;
-}
-
-.weather-forecast .week {
-  column-gap: 8px;
 }
 
 .weather-forecast .date {
@@ -184,7 +182,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  top: -115px;
+  bottom: 145px;
   left: 412px;
   position: relative;
 }
@@ -200,7 +198,6 @@
   margin-left: 20px;
   margin-top: 15px;
   line-height: 34px;
-  position: relative;
   text-align: center;
   color: #111f4d;
   border-radius: 35px;
