@@ -139,6 +139,8 @@ function displayWeather(response) {
   );
   fetchForecastData(response.data.coord);
 }
+let button = document.querySelector("#search");
+button.addEventListener("click", displayWeather);
 
 let celciusTemperature = null;
 
@@ -202,9 +204,6 @@ celciusLink.addEventListener("click", convertToCelcius);
 //     response.data.wind.speed
 //   );
 // }
-
-// let button = document.querySelector("#search");
-// button.addEventListener("click", showTemperature);
 
 function showLocation(position) {
   let lat = position.coords.latitude;
