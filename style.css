@@ -1,5 +1,9 @@
+body {
+  background: #ffebeb;
+}
+
 .weather-app {
-  border: 1px solid #d0d0d0;
+  border: none;
   border-radius: 20px;
   height: 650px;
 }
